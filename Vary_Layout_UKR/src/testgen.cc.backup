@@ -1,0 +1,387 @@
+#include "Avx2Builder.h"
+
+
+
+void testAvx2Builder(){
+    ukrgen::Avx2Builder<float> avx2_sp;
+    ukrgen::Avx2Builder<double> avx2_dp;
+
+//    cout<<avx2_sp.emitFMA(0,1,2);
+//    cout<<avx2_dp.emitFMA(0,1,2);
+//    cout<<avx2_sp.BB_initYMM(0,15);
+    // cout<<avx2_sp.BB_outProduct(2, 2, 6,  //#Vector for bcast A,  #Vector of load B,  num of elem As
+    //                             0, 2, // Abase is No.0 reg, Aoffset
+    //                             1);  //Bbase
+    //     cout<<avx2_sp.BB_outProduct(2, 2, 6,  //#Vector for bcast A,  #Vector of load B,  num of elem As
+    //                                 0, 144, // Abase is No.0 reg, Aoffset
+    //                                 1,//Bbase
+    //                                 16,12);  
+
+    // cout<<avx2_sp.BB_unroll_outProduct(2, 2, 6,  //#Vector for bcast A,  #Vector of load B,  num of elem As
+    //                                    0, 2, // Abase is No.0 reg, Aoffset
+    //                                    1, 2);  //Bbase is No.1 reg,  unroll times
+                                       
+//    cout<<endl;
+//    cout<<avx2_sp.BB_test_loop(4,2,"body\n");
+    
+    // cout<<avx2_sp.Loop_outProduct(2, 2, 6,  //#Vector for bcast A,  #Vector of load B,  num of elem As
+                                  // 0, 2, // Abase is No.0 reg, Aoffset
+                                  // 1, 4, 4);  //Bbase is No.1 reg,  unroll times,  iterator reg
+
+
+    int Abase_reg = 0;
+    int Bbase_reg = 1;
+    int BaseCReg = 2;
+    
+    int Nvec_BcastA = 2;
+    int Nvec_LoadB = 2;
+    int num_elemA = 6;
+
+    int A_elem_stride_inword = 1;
+
+    int unroll_times = 4;
+    int k_iterator_reg = 4;
+    string N_k_unroll = "kiter";
+    string N_k_edge = "kedge";
+    
+    int row_stride = 16;
+
+    // cout<<avx2_sp.Loop_Kiter_outP(Nvec_BcastA, Nvec_LoadB, num_elemA, 
+    //                               Abase_reg, A_elem_stride_inbyte,
+    //                               Bbase_reg, unroll_times, k_iterator_reg,  
+    //                               N_k_unroll, N_k_edge);
+
+//    cout<<avx2_sp.BB_Prefetch_all_A(Abase_reg, A_elem_stride_inword, 32, 280);
+    cout<<endl;
+    auto content = avx2_sp.BB_initDataAddress(Abase_reg, Bbase_reg, BaseCReg);
+    content += avx2_sp.UKR_alpha1beta1_rs_cs1(Nvec_BcastA, Nvec_LoadB, num_elemA, 
+                                         Abase_reg, A_elem_stride_inword,
+                                         Bbase_reg, unroll_times, k_iterator_reg,  
+                                         N_k_unroll, N_k_edge, BaseCReg, row_stride);
+
+    cout << avx2_sp.ASM_block(content)<<endl;
+    // cout<<avx2_sp.Loop_Kiter_outP(2, 2, 6,  //#Vector for bcast A,  #Vector of load B,  num of elem As
+    //                               0, 2, // Abase is No.0 reg, Aoffset
+    //                               1, 4, 4,  //Bbase is No.1 reg,  unroll times,  iterator reg
+    //                               "kiter", "kleft"); 
+}
+
+void testAvx2Scatter(int b, int f, int x, int y, int c, int w, int h, int numA){
+    ukrgen::Avx2Builder<float> avx2_sp;
+    avx2_sp.global_label *= numA ;
+//    cout<<avx2_sp.BB_outProduct_scatter(2,2,6,0,  6,  1);
+
+    int rax = 0;
+    int rbx = 1;
+    int r8 = 6;
+    int rcx = 3;
+    int rsi = 4;
+    
+    int numVA = 2;
+    int numVB = 2;
+//    int numA = 6;
+
+    int BaseAReg  =rax; //rax
+    int BaseBReg = rbx;//rbx
+    int Astride_reg = r8;//r8
+
+    //bfxy, bc(x+w)(y+h), cwhf
+
+    // int b = 1;
+    // int f = 128;
+    // int c = 64;
+    // int x = 112;
+    // int y = 112;
+    // int w = 3;
+    // int h = 3;
+    
+    int xwindow_tile = w;
+    int ywindow_tile = h;
+
+    //In(b,c,x+w, y+s)
+    int xwindow_In_stride = (y+h-1);
+    int ywindow_In_stride = 1;
+
+    //Ker(f,c,w,s) -> (c,w,s,f)
+//    int xwindow_Ker_stride = h*f;
+//    int ywindow_Ker_stride = f;
+//    int Ker_c_stride = w*h*f;
+    
+    //Ker(f,c,w,s) -> (f1, c,w,s,f2=16)
+    int xwindow_Ker_stride = h*16;
+    int ywindow_Ker_stride = 16;
+    int Ker_c_stride = w*h*16;
+    
+    int In_c_stride = (x + w-1) * (y + h-1);
+    int iterator_reg = rsi;// rsi
+
+    int Out_f_stride = x*y;
+    
+    // string ukrloop = avx2_sp.BB_cnn_Infeature_Loop(numVA,  numVB, numA, BaseAReg, Astride_reg, BaseBReg,
+    //                                     xwindow_tile,  xwindow_In_stride, xwindow_Ker_stride,
+    //                                     ywindow_tile, ywindow_In_stride, ywindow_Ker_stride,
+    //                                     In_c_stride, Ker_c_stride, iterator_reg);
+
+//    string ukraddup = avx2_sp.BB_AddupOut_transpose(Out_f_stride);
+//    string code = ukrloop + ukraddup;
+    string code = avx2_sp.UKR_CNN_bfxy_bcxy_cwsf(numVA,  numVB, numA, BaseAReg, Astride_reg, BaseBReg,
+                                         xwindow_tile,  xwindow_In_stride, xwindow_Ker_stride,
+                                         ywindow_tile, ywindow_In_stride, ywindow_Ker_stride,
+                                         In_c_stride, Ker_c_stride, iterator_reg, Out_f_stride);
+    string ukrcontent = avx2_sp.BB_cnn_prepare(code);
+
+
+    string ukrfunc = "#pragma once\n";
+    string funcname = "inline void cnn_ukr_float_scatter_";
+    funcname += to_string(numA)+"x";
+    funcname += to_string(numVB)+"v_bfxy_bcxy_cwhf";
+    ukrfunc+= funcname;
+    ukrfunc+= "(float *A, float *B, float *C, long long sf_tile, long long *Astride)";
+
+    ukrfunc += "{\n";
+    ukrfunc += avx2_sp.ASM_cnn_block( ukrcontent);
+    ukrfunc+= "}\n";
+
+    string genukr_file_name = "gen_ukr_bfxycwh_Ker16f_In1c_Out1f_v"+to_string(numA)+"_";
+    
+    genukr_file_name+= std::to_string(b);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(f);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(x);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(y);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(c);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(w);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(h);
+    genukr_file_name+= ".h";
+
+    std::ofstream ofs(genukr_file_name, std::ofstream::out);
+    ofs<< ukrfunc;
+    ofs.close();
+//    cout<<ukrfunc<<endl;
+    //Out(b,f,x,y)
+
+    //bxy,  f
+
+    /*
+      bxy =0     0-7 8-15
+      bxy =1     0-7 8-15
+      bxy =2     0-7 8-15
+      bxy =3     0-7 8-15
+      bxy =4     0-7 8-15
+      bxy =5     0-7 8-15
+
+      =>
+
+      f0  f8
+      f1  f9
+      f2  f10
+      f3  f11
+      f4  f12
+      f5  f13
+      f6  f14
+      f7  f15
+      
+     */
+
+}
+
+
+void testAvx2CnnNoTrans(int b, int f, int x, int y, int c, int w, int h,
+                        int num_A, int num_B, string ukrtype, int csplit){
+    assert(ukrtype == string("rotate") or ukrtype == string("gemm"));
+    
+    ukrgen::Avx2Builder<float> avx2_sp;    
+    avx2_sp.global_label *= num_A ;
+    avx2_sp.global_label += num_B ;
+    avx2_sp.label_prefix = ukrtype;
+//    cout<<avx2_sp.BB_outProduct_scatter(2,2,6,0,  6,  1);
+
+    int rax = 0;
+    int rbx = 1;
+    int r8 = 6;
+    int rcx = 2;
+    int rsi = 4;
+    int rdi = 5;
+    
+    int numVA = 2;
+    int numVB = 2;
+//    int numA = 6;
+    int numA = num_A;
+    int BaseAReg  =rax; //rax
+    int BaseBReg = rbx;//rbx
+    int BaseCReg = rcx;
+    int C_rowstride = 16;
+    int Astride_reg = r8;//r8
+//reserved r8, r9, r10, r11, r12,r13
+    //bf1xyf2, bc1(x+w)(y+h)c2, f1cwhf2
+    
+    int xwindow_tile = w;
+    int ywindow_tile = h;
+
+
+    int xwindow_In_stride = (y+h-1)* 16;
+    int ywindow_In_stride = 1 * 16;
+    int In_c_stride = (x + w-1) * (y + h-1) * 16;
+
+    //Ker(f,c,w,s) -> (f1, c,w,s,f2=16)
+    int xwindow_Ker_stride = h*16;
+    int ywindow_Ker_stride = 16;
+    int Ker_c_stride = w*h*16;
+    
+    int unroll_c = 16;
+    int iterator_reg = rsi;// rsi
+
+    int numB = num_B;
+    bool fuseS = false;
+
+    int cs = 8;
+    if(h == 3 && numA==3){
+        numVA = 3;
+        numVB = 3;
+        numB = num_B;
+        assert(numB <=24);
+        if (numA<3){
+            numVA = numA;
+        }
+        if(num_B <24){
+            numVB = num_B/8;
+        }
+        if(ukrtype== "rotate")fuseS = true;
+        xwindow_In_stride = (y+h-1)* 8;
+        ywindow_In_stride = 1 * 8;
+        In_c_stride = (x + w-1) * (y + h-1) * 8;
+
+        //Ker(f,c,w,s) -> (f1, c,w,s,f2=16)
+        xwindow_Ker_stride = h*24;
+        ywindow_Ker_stride = 24;
+        Ker_c_stride = w*h*24;
+        unroll_c=8;
+
+        int out_f_stride = x*y*8;
+        cs = out_f_stride;
+        C_rowstride = 8;
+    }
+    else if(numB==16 && csplit ==8){
+        cout<<"numB == 16"<<endl;
+        numVA = 2;
+        numVB = 2;
+        numB = num_B;
+        assert(numB <=16);
+        if (numA<2){
+            numVA = numA;
+        }
+        if(num_B <16){
+            numVB = num_B/8;
+        }
+
+        xwindow_In_stride = (y+h-1)* 8;
+        ywindow_In_stride = 1 * 8;
+        In_c_stride = (x + w-1) * (y + h-1) * 8;
+
+        unroll_c=8;
+
+        int out_f_stride = x*y*8;
+        cs = out_f_stride;
+        C_rowstride = 8;
+    }
+
+    cout<<"ywindow k st="<<ywindow_Ker_stride<<endl;
+    string ukr_body = 
+    avx2_sp.BB_cnn_c1xyc2_kernel(
+            numVA, numVB, numA, BaseAReg, Astride_reg, BaseBReg,
+            xwindow_tile, xwindow_In_stride, xwindow_Ker_stride,
+            ywindow_tile, ywindow_In_stride, ywindow_Ker_stride,
+            unroll_c, In_c_stride,
+            Ker_c_stride, rsi, rdi,
+            BaseCReg, C_rowstride,
+            numB, fuseS, cs
+        );
+
+    string asm_block =  avx2_sp.ASM_cnn_ukr_c1xyc2(ukr_body) ;
+    
+
+
+    string ukrfunc = "#pragma once\n";
+    string funcname = "inline void cnn_ukr_float_scatter_";
+    funcname += to_string(numA)+"x";
+    funcname += to_string(numVB)+"v_cxyc"+ukrtype;
+    ukrfunc+= funcname;
+    ukrfunc+= "(float *A, float *B, float *C, long long c_tile, long long *Astride)";
+
+    ukrfunc += "{\n";
+    ukrfunc += "long long sf_tile = c_tile / " + to_string(unroll_c) +  " ;\n";
+    ukrfunc += "long long sf_tail = c_tile %" + to_string(unroll_c)  +" ;\n";
+    ukrfunc += asm_block;
+    ukrfunc+= "}\n";
+
+//    cout<<ukrfunc<<endl;
+//    string genukr_file_name = "gen_ukr_bfxycwh_Ker16f_In16c_Out16f_v"+to_string(numA)+"_";
+    string genukr_file_name = "gen_ukr_A"+to_string(numA)+"B" + to_string(numVB) + ukrtype;
+//    string genukr_file_name = "gen_ukr_INc1xyc2_KERf1cwhf2_numA";
+//    genukr_file_name+= std::to_string(numA);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(b);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(f);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(x);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(y);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(c);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(w);
+    genukr_file_name+= "_";
+    genukr_file_name+= std::to_string(h);
+    genukr_file_name+= ".h";
+
+    std::ofstream ofs(genukr_file_name, std::ofstream::out);
+    ofs<< ukrfunc;
+    ofs.close();
+
+//    int Out_f_stride = x*y;
+}
+
+
+int main(int argc, char** argv){
+    if(argc == 11){
+//    testAvx2Builder();
+        
+        std::cout<<"b,f,x,y,c,w,h, numA, numB=";
+        for(int i = 1; i < 10; i++){
+            cout<<argv[i]<<",";
+        }
+        cout<<endl;
+
+        int b = atoi(argv[1]);
+        int f = atoi(argv[2]);
+        int x = atoi(argv[3]);
+        int y = atoi(argv[4]);
+        int c = atoi(argv[5]);
+        int w = atoi(argv[6]);
+        int h = atoi(argv[7]);
+        int numA = atoi(argv[8]);
+        int numB = atoi(argv[9]);
+        int ker_type = atoi(argv[10]);
+
+        // ker_type defines (kf, ic, of)
+        // 1: (16,1,1)
+        // 2: split c rotate
+        // 3: split c gemm
+        if(ker_type==1)testAvx2Scatter(b,f,x,y,c,w,h, numA);
+        else if(ker_type==2) testAvx2CnnNoTrans(b,f,x,y,c,w,h, numA, numB, "rotate", 8 );
+        else if (ker_type==3) testAvx2CnnNoTrans(b,f,x,y,c,w,h, numA, numB, "gemm", 8 );
+        else if (ker_type==4) testAvx2CnnNoTrans(b,f,x,y,c,w,h, numA, numB, "gemm", 16 );
+        else{cout<<"no ukr!\n";}
+//        testAvx2CnnNoTrans(b,f,x,y,c,w,h, numA);
+    }
+    else{
+        std::cout<<"Exit: need 10 arguments: b,f,x,y,c,w,h, numA, numB, kerneltype"<<endl;
+    }
+    return 0;
+}
