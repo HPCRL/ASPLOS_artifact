@@ -1,0 +1,11 @@
+clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO0.log-new.ll -o YOLO0.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO1.log-new.ll -o YOLO1.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO2.log-new.ll -o YOLO2.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO3.log-new.ll -o YOLO3.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO4.log-new.ll -o YOLO4.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO5.log-new.ll -o YOLO5.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO6.log-new.ll -o YOLO6.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO7.log-new.ll -o YOLO7.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO8.log-new.ll -o YOLO8.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO9.log-new.ll -o YOLO9.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 YOLO10.log-new.ll -o YOLO10.so timing.c -fopenmp=libomp 

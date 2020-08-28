@@ -1,0 +1,13 @@
+
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob1.log-new.ll -o Mob1.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob2.log-new.ll -o Mob2.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob3.log-new.ll -o Mob3.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob4.log-new.ll -o Mob4.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob5.log-new.ll -o Mob5.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob6.log-new.ll -o Mob6.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob7.log-new.ll -o Mob7.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob8.log-new.ll -o Mob8.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob9.log-new.ll -o Mob9.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob10.log-new.ll -o Mob10.so timing.c -fopenmp=libomp 
+clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob11.log-new.ll -o Mob11.so timing.c -fopenmp=libomp 
+clang-8  -shared -fPIC -mavx2 -march=native -O3 Mob12.log-new.ll -o Mob12.so timing.c -fopenmp=libomp 
