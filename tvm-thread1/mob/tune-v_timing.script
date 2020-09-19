@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#N, H, W, CO, CI, KH, KW, strides, padding trails logname
+
+printf "\n==== Start Execution 1 =====" 
+time python3 tune_conv2d_x86_timing.py 1 114 114 32 32 3 3 1 0 1000 Mob1.log Mob1.so 2>&1 | tee Mob1.txt
+printf "\n==== Start Execution 2 =====" 
+time python3 tune_conv2d_x86_timing.py 1 114 114 64 64 3 3 2 0 1000 Mob2.log Mob2.so 2>&1 | tee Mob2.txt
+printf "\n==== Start Execution 3 =====" 
+time python3 tune_conv2d_x86_timing.py 1 58 58 128 128 3 3 1 0 1000 Mob3.log Mob3.so 2>&1 | tee Mob3.txt
+printf "\n==== Start Execution 4 =====" 
+time python3 tune_conv2d_x86_timing.py 1 58 58 128 128 3 3 2 0 1000 Mob4.log Mob4.so 2>&1 | tee Mob4.txt
+
+printf "\n==== Start Execution 5 =====" 
+time python3 tune_conv2d_x86_timing.py 1 30 30 256 256 3 3 1 0 1000 Mob5.log Mob5.so 2>&1 | tee Mob5.txt
+printf "\n==== Start Execution 6 =====" 
+time python3 tune_conv2d_x86_timing.py 1 30 30 256 256 3 3 2 0 1000 Mob6.log Mob6.so 2>&1 | tee Mob6.txt
+printf "\n==== Start Execution 7 =====" 
+time python3 tune_conv2d_x86_timing.py 1 16 16 512 512 3 3 1 0 1000 Mob7.log Mob7.so 2>&1 | tee Mob7.txt
+printf "\n==== Start Execution 8 =====" 
+time python3 tune_conv2d_x86_timing.py 1 16 16 512 512 3 3 2 0 1000 Mob8.log Mob8.so 2>&1 | tee Mob8.txt
+
+printf "\n==== Start Execution 9 =====" 
+time python3 tune_conv2d_x86_timing.py 1 9 9 1024 1024 3 3 1 0 1000 Mob9.log Mob9.so 2>&1 | tee Mob9.txt
+
+
+printf "\n==== Done  =====" 
+

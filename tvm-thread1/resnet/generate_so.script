@@ -1,0 +1,13 @@
+
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet1.log-new.ll -o Resnet1.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet2.log-new.ll -o Resnet2.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet3.log-new.ll -o Resnet3.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet4.log-new.ll -o Resnet4.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet5.log-new.ll -o Resnet5.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet6.log-new.ll -o Resnet6.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet7.log-new.ll -o Resnet7.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet8.log-new.ll -o Resnet8.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet9.log-new.ll -o Resnet9.so timing.c -fopenmp=libomp 
+ clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet10.log-new.ll -o Resnet10.so timing.c -fopenmp=libomp 
+clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet11.log-new.ll -o Resnet11.so timing.c -fopenmp=libomp 
+clang-8  -shared -fPIC -mavx2 -march=native -O3 Resnet12.log-new.ll -o Resnet12.so timing.c -fopenmp=libomp 
