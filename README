@@ -1,3 +1,10 @@
+requires python modules:  amplpy, sympy, joblib
+requires libs/bins:   ampl, ipopt
+create a build folder compiles Vary_Layout_UKR use cmake first
+main() in main.py defines required input args
+
+
+
 -------------------------------------------------------------------------
 Run TVM tests
 See subfolder tvm-thread1
