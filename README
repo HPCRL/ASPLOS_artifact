@@ -1,6 +1,16 @@
-requires python modules:  amplpy, sympy, joblib
-requires libs/bins:   ampl, ipopt
-create a build folder compiles Vary_Layout_UKR use cmake first
+recommend use miniconda with python 3.8
+requires python modules:  amplpy, sympy, joblib (recommend use pip in miniconda virtual env to install)
+requires libs/bins:   ampl, ipopt (need set up in the PATH, so 'ampl', 'ipopt' command is available to call in shell)
+
+under Vary_Layout_Ukr:
+mkdir build
+cd build
+cmake ..
+make
+
+
+
+
 main() in main.py defines required input args
 
 
