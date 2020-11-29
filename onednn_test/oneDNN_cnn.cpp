@@ -320,8 +320,6 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
     
 //        cout<<"end\n";
 //        free(dirty);
-
-    
 //    origin_conv(batch_inp[0], batch_ker[0], comp_output, B, F, X, Y, C, W, S, sx, sy) ;       //
 //    compare((float*)user_output_mem.get_data_handle(), comp_output, B*F*X*Y);                                              //
     
