@@ -40,6 +40,8 @@ int main(){
     for(int i = 0; i < (iter+1)*Bsize; i++) B[i] = rand()%10;
     for(int i = 0; i < (iter+1)*Csize; i++) C[i] = 0;
     for(int i = 0; i < Csize; i++) C2[i] = C[i];
+
+
 #ifdef LIKWID_PERFMON
     LIKWID_MARKER_THREADINIT;
 #endif
@@ -59,11 +61,8 @@ int main(){
   LIKWID_MARKER_CLOSE;
   return 5;
 #endif
-  bcxy_kcrs_conv(A, B, C2, 1, uNf, uNx, uNy, uNc, uNw, uNh);
-//    origin_conv(A, B, C2, 1, uNf, uNx, uNy, uNc, uNw, uNh);
-    cout<<"origin done"<<endl;
 
-    int ret = compare(C, C2, Csize);
+
 
     float ressss;
     float tttmp[8];
@@ -105,6 +104,6 @@ int main(){
         
 //        cout<<"time = "<<(tend-tstart)<<", gflop = "<<gflop<<endl;
 
-    return ret;
+    return 0;
 
 }
