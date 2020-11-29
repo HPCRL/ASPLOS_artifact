@@ -15,22 +15,16 @@
 #include "dnnl_debug.h"
 #include "example_utils.hpp"
 #include "omp.h"
-
-#ifdef LIKWID_PERFMON
-#include <likwid.h>
-#endif
-
 using namespace dnnl;
 using namespace std;
-//#define TOTITER 10
+#define TOTITER 1
 memory::dim product(const memory::dims &dims) {
     return std::accumulate(dims.begin(), dims.end(), (memory::dim)1,
             std::multiplies<memory::dim>());
 }
-int compare(vector<float> C1, vector<float>C2, int size) {
+int compare(float*C1, vector<float>&C2, int size) {
   cout << "comparing" << endl;
   for (int i = 0; i < size; i++) {
-
     if (C1[i] != C2[i]) {
       cout << "data at " << i << " C1=" << C1[i] << ", C2=" << C2[i] << endl;
       return -1;
@@ -39,7 +33,7 @@ int compare(vector<float> C1, vector<float>C2, int size) {
   cout << "fin compare\n";
   return 0;
 }
-void origin_conv(vector<float> In, vector<float> Ker, vector<float> Out, int Nb, int Nt, int Nx,
+ void origin_conv(vector<float>& In, vector<float> &Ker, vector<float> &Out, int Nb, int Nt, int Nx,
                  int Ny, int Ns, int Nw, int Nh, int StrideX, int StrideY) {
     int LOF=1;
     int LC=1;
@@ -75,6 +69,7 @@ void origin_conv(vector<float> In, vector<float> Ker, vector<float> Out, int Nb,
                   Out[Ooffset] += In[Ioffset]* Ker[Koffset];
 
 
+
                   // if(Ooffset == 896){
                   //     cout<<"Inoff="<<Ioffset<<", Koff="<<Koffset<<endl;
                   // }
@@ -88,10 +83,6 @@ void origin_conv(vector<float> In, vector<float> Ker, vector<float> Out, int Nb,
 }
 
 void test_conv(engine::kind engine_kind, long long nb, long long nw, long long ns, long long nx, long long ny, long long nf, long long nc, int sx, int sy){
-#ifdef LIKWID_PERFMON
-  LIKWID_MARKER_INIT;
-#endif
-    
     using tag = memory::format_tag;
     engine eng(engine_kind, 0);
     stream engine_stream(eng);
@@ -138,8 +129,8 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
     std::vector<float> batch_out [TOTITER];
     std::vector<float> batch_ker [TOTITER];
     std::vector<float> batch_inp [TOTITER];
-
-    for (int it = 0; it < TOTITER; it++){
+    auto user_output_mem = memory({ {B, F, X, Y}, memory::data_type::f32, tag::nchw }, eng);
+    
 
         std::vector<float> output(B*F*X*Y);
         std::vector<float> input(B*C*(sx*X+W-1)*(sy*Y+S-1));
@@ -158,7 +149,8 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
         for(int y = 0; y<sy*Y+S-1; y++)
         {
             int ioff = i_offset(b,c,x,y);
-            input[ioff] = rand()%10-std::cos(ioff / 10.0f);
+            input[ioff] = rand()%10;//-std::cos(ioff / 10.0f);
+
         }
 
 
@@ -168,12 +160,14 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
         for(int s = 0; s<S; s++)
         {
             int koff = k_offset(f,c,w,s);
-            kernel[koff] = rand()%10-std::cos(koff/10.0f);
+            kernel[koff] = rand()%10;//-std::cos(koff/10.0f);
+
         }
 
-        batch_out[it] = output;
-        batch_ker[it] = kernel;
-        batch_inp[it] = input;
+
+        batch_out[0] = output;
+        batch_ker[0] = kernel;
+        batch_inp[0] = input;
 
 
         auto input_md = memory::desc(
@@ -251,7 +245,16 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
                 {DNNL_ARG_DST, conv_output_mem}
             });
 
-    }
+        if( conv_prim_desc.dst_desc() != user_output_mem.get_desc()){
+            printf("reorder out\n");
+            net.push_back(reorder(conv_output_mem, user_output_mem));
+            printf("reorder out\n");
+            net_args.push_back(
+                { {DNNL_ARG_FROM, conv_output_mem}, {DNNL_ARG_TO, user_output_mem} }
+                );
+        }
+
+    
     assert(net.size() == net_args.size() && "something is missing, net size != net arg size\n");
 //    std::cout<<"start!\n";
     vector<double> gflop_array;
@@ -273,39 +276,29 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
 //            cout<<"start\n";
 
     ////////////////////////////////////////////////////
-    // std::vector<float> comp_output = batch_out[0]; //
+     std::vector<float> comp_output = batch_out[0]; //
     ////////////////////////////////////////////////////
     float ressss;
-    float tttmp[8];
+    float tttmp[18];
     int flushsz=100000000;
 
     
 
 
-    int totiter = 1;
+    int totiter = 50;
     vector<double> gflops;
     for (int i = 0; i< totiter; i++){
         float *dirty = (float *)malloc(flushsz * sizeof(float));
 #pragma omp parallel for
         for (int dirt = 0; dirt < flushsz; dirt++){
             dirty[dirt] += dirt%100;
-            tttmp[dirt%8] += dirty[dirt];
+            tttmp[dirt%18] += dirty[dirt];
         }
-        for(int ii =0; ii<8;ii++){ressss+= tttmp[ii];}
+        for(int ii =0; ii<18;ii++){ressss+= tttmp[ii];}
         cout<<"flush"<<ressss<<endl;            
         cout<<"start\n";
 
         double start2 = omp_get_wtime();
-
-#ifdef LIKWID_PERFMON
-    LIKWID_MARKER_THREADINIT;
-#endif
-#ifdef LIKWID_PERFMON
-    LIKWID_MARKER_START("Compute");
-#endif
-    
-
-        
         for(size_t i = 0; i < net.size(); i++){
             net.at(i).
                 execute(
@@ -313,17 +306,7 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
         }
         s.wait();
         double end = omp_get_wtime();
-
-
-#ifdef LIKWID_PERFMON
-	LIKWID_MARKER_STOP("Compute");
-#endif
         free(dirty);
-
-#ifdef LIKWID_PERFMON
-  LIKWID_MARKER_CLOSE;
-  return ;
-#endif        
         double avg_gflop=(1.0*flop_cnt/(end-start2)/1000.0/1000.0/1000.0);
         gflops.push_back(avg_gflop);
     }
@@ -333,15 +316,15 @@ void test_conv(engine::kind engine_kind, long long nb, long long nw, long long n
         cout<<i<<endl;
         average += i;
     }
-    cout<<"avg flops,"<<average/50.0<<endl;
+    cout<<"avg flops,"<<average/totiter<<endl;
     
 //        cout<<"end\n";
 //        free(dirty);
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////
-    // origin_conv(batch_inp[0], batch_ker[0], comp_output, B, F, X, Y, C, W, S, sx, sy) ;       //
-    // compare(batch_out[0], comp_output, B*F*X*Y);                                              //
-    ///////////////////////////////////////////////////////////////////////////////////////////////
+    
+//    origin_conv(batch_inp[0], batch_ker[0], comp_output, B, F, X, Y, C, W, S, sx, sy) ;       //
+//    compare((float*)user_output_mem.get_data_handle(), comp_output, B*F*X*Y);                                              //
+    
 
 //    std::cout<<"exe time flop = "<<flop_cnt/(end-start2)/1000.0/1000.0/1000.0<<endl;
 //    std::cout<<"before wait!\n";
