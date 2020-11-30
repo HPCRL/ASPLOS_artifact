@@ -1,6 +1,8 @@
 recommend use miniconda with python 3.8
 requires python modules:  amplpy, sympy, joblib (recommend use pip in miniconda virtual env to install)
-requires libs/bins:   ampl, ipopt (need set up in the PATH, so 'ampl', 'ipopt' command is available to call in shell)
+requires libs/bins: icpc,  ampl, ipopt (need set up in the PATH, so 'ampl', 'ipopt' command is available to call in shell)
+
+
 
 under Vary_Layout_Ukr:
 mkdir build
@@ -8,10 +10,35 @@ cd build
 cmake ..
 make
 
+under TileLoopGenerator:
+check and fix the PATH in run_fromfiles.sh 
+
+./run_fromfiles.sh yolo.txt 8
+to run all yolo benchmarks with 8 core
+
+then under yolo.txt.dirK1611
+grep "avg" *
+to check results
+
+====
+
+run onednn
+
+download onednn and check this version
+git checkout ad368f484
+
+put files under our onednn_test/ to onednn's example/
+check and fix the PATH in run_fromfiles.sh
+
+./run_fromfiles.sh yolo.txt 8
+to run all yolo benchmarks with 8 core
+
+then under yolo.txt.dir
+grep "avg" *
+to check results
 
 
 
-main() in main.py defines required input args
 
 
 
