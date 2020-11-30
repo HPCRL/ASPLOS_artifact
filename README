@@ -19,7 +19,7 @@ to run all yolo benchmarks with 8 core
 then under yolo.txt.dirK1611
 grep "avg" *
 to check results
-
+(in raw data the yolo layer is named continous. layer1->yolo0, layer2-> yolo2, layer3-> yolo4 ... layer11-> yolo23)
 ====
 
 run onednn
