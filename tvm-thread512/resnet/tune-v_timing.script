@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#N, H, W, CO, CI, KH, KW, strides, padding trails logname
+
+printf "\n==== Start Execution 1 =====" 
+time python3 tune_conv2d_x86_timing.py 1 230 230 64 3 7 7 2 0 1000 Resnet1.log Resnet1.so 2>&1 | tee Resnet1.txt
+printf "\n==== Start Execution 2 =====" 
+time python3 tune_conv2d_x86_timing.py 1 58 58 64 64 3 3 1 0 1000 Resnet2.log Resnet2.so 2>&1 | tee Resnet2.txt
+printf "\n==== Start Execution 3 =====" 
+time python3 tune_conv2d_x86_timing.py 1 56 56 64 64 1 1 1 0 1000 Resnet3.log Resnet3.so 2>&1 | tee Resnet3.txt
+printf "\n==== Start Execution 4 =====" 
+time python3 tune_conv2d_x86_timing.py 1 58 58 128 64 3 3 2 0 1000 Resnet4.log Resnet4.so 2>&1 | tee Resnet4.txt
+
+printf "\n==== Start Execution 5 =====" 
+time python3 tune_conv2d_x86_timing.py 1 56 56 128 64 1 1 2 0 1000 Resnet5.log Resnet5.so 2>&1 | tee Resnet5.txt
+printf "\n==== Start Execution 6 =====" 
+time python3 tune_conv2d_x86_timing.py 1 30 30 128 128 3 3 1 0 1000 Resnet6.log Resnet6.so 2>&1 | tee Resnet6.txt
+printf "\n==== Start Execution 7 =====" 
+time python3 tune_conv2d_x86_timing.py 1 30 30 256 128 3 3 2 0 1000 Resnet7.log Resnet7.so 2>&1 | tee Resnet7.txt
+printf "\n==== Start Execution 8 =====" 
+time python3 tune_conv2d_x86_timing.py 1 28 28 256 128 1 1 2 0 1000 Resnet8.log Resnet8.so 2>&1 | tee Resnet8.txt
+
+printf "\n==== Start Execution 9 =====" 
+time python3 tune_conv2d_x86_timing.py 1 16 16 256 256 3 3 1 0 1000 Resnet9.log Resnet9.so 2>&1 | tee Resnet9.txt
+printf "\n==== Start Execution 10 =====" 
+time python3 tune_conv2d_x86_timing.py 1 16 16 512 256 3 3 2 0 1000 Resnet10.log Resnet10.so 2>&1 | tee Resnet10.txt
+printf "\n==== Start Execution 11 =====" 
+time python3 tune_conv2d_x86_timing.py 1 14 14 512 256 1 1 2 0 1000 Resnet11.log Resnet11.so 2>&1 | tee Resnet11.txt
+printf "\n==== Start Execution 12 =====" 
+time python3 tune_conv2d_x86_timing.py 1 9 9 512 512 3 3 1 0 1000 Resnet12.log Resnet12.so 2>&1 | tee Resnet12.txt
+
+printf "\n==== Done  =====" 
