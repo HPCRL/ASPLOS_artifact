@@ -44,7 +44,7 @@ to check results
 
 -------------------------------------------------------------------------
 Run TVM tests
-See subfolder tvm-thread1
+[1] See subfolder tvm-thread1
 1. Using TVM v0.6 commit 008aa838139bcd8e66c680f14a944f7af274a33d
 and LLVM-8
 
@@ -56,13 +56,16 @@ and LLVM-8
 
 5. Modify dumped llvm file to invoke cache flush and timing. Execute modi-llvm.sh
 
-6. Build llvm file and generate shared object (.so) file
-by using like "clang-8 -shared -fPIC -mavx2 -march=native -O3 Vi0.log.ll -o Vi0.so timing.c -fopenmp=libomp "
-replace llvm file name and output file name. See generate_so.script.
+6. Build llvm file and generate shared object (.so) file by using
+"clang-8 -shared -fPIC -mavx2 -march=native -O3 YOLO1.log.ll -o YOLO1.so timing.c -fopenmp=libomp "
+You need to replace llvm file name and output file name if necessary. See generate_so.script for detail compile cmd. 
 
 7. Modify the shared library path in file “tune_conv2d_x86_timing.py” before measuring time(around line 75 "path_dso = ..."). 
 tune_conv2d_x86_timing.py needs to load a ".so" file created in step 6 to do the time measurement. 
 
 8. Add corresponding file path in script “tune_all.sh”, “measure_all.sh”.
 The script “run.sh” executes all training and time measure tasks at one time. If you want to do these tasks separately, run “tune_all.sh”, “measure_all.sh” separately.
+
+[2] tvm-thread512 is the folder of avx512 tuning and timing scripts. Please follow the previous steps as in "tvm-thread1". 
+
 
