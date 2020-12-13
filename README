@@ -1,16 +1,25 @@
-recommend use miniconda with python 3.8
-requires python modules:  amplpy, sympy, joblib (recommend use pip in miniconda virtual env to install)
-requires libs/bins: icpc,  ampl, ipopt, clang++(version 10) (need set up in the PATH, so 'ampl', 'ipopt' command is available to call in shell)
+recommend install miniconda (https://docs.conda.io/en/latest/miniconda.html#)
+create virtual env with python 3.8
+activate virtual env
+requires python modules:  amplpy, sympy, joblib (recommend use "pip install" in miniconda virtual env to install)
+requires libs/bins: 
+icpc 
+ampl (https://ampl.com/try-ampl/download-a-free-demo/)
+ipopt (https://ampl.com/products/solvers/all-solvers-for-ampl/)
+llvm10
+(all of these need to be set up in the PATH, so 'ampl', 'ipopt', 'icpc', 'clang++' command is available to call in shell)
+#for hardware counter, likwid is also required: https://github.com/RRZE-HPC/likwid
 
+to get stable experiment results, please diable hyperthreads and fix the frequency at base frequency of CPU
 
-
-under Vary_Layout_Ukr:
+1. compile avx2 ukr generator:
+goto /Vary_Layout_Ukr:
 mkdir build
 cd build
 cmake ..
 make
 
-run experiments on i7-9700k:
+2. run experiments on i7-9700k:
 go to /TileLoopGenerator:
 check and fix the PATH in run_fromfiles.sh 
 ./run_fromfiles.sh yolo.txt 8
@@ -27,7 +36,7 @@ grep ......
 
 
 
-run experiments on i9-10908xe:
+3. run experiments on i9-10908xe:
 go to /avx512/TileLoopGenerator
 check and fix the PATH in run_fromfiles.sh  run_fromfiles_small.sh
 ./run_fromfiles.sh yolo.txt 18
@@ -42,11 +51,18 @@ grep ......
 grep ......
 
 # for resnet and deepwise(mobileNet) on i9, we have 2 different ukr.  so please do 2 group of tests and pick the best.
+
+4. run validation on avx2 single core
+Requires likwid to be installed properly
+goto /validation_all/gflop_validate or  /validation_all/hdwc_validate
+run the follwing bash files:
+gflop: run_valid_*.sh
+hdwc: runhc_*.sh
 ====
 
 run onednn
 
-download onednn and check this version
+download onednn (https://github.com/oneapi-src/oneDNN) and check this version
 git checkout ad368f484
 
 put files under our onednn_test/ to onednn's example/
