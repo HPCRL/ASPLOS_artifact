@@ -1,0 +1,351 @@
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=6 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=30 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=12 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=60 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=120 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=18 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=90 -DTf2=128 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=32 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=32 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=32 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=32 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=64 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=64 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=64 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=64 -DTc1=32
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=128 -DTc1=1
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=128 -DTc1=8
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=128 -DTc1=16
+icpc -O3 -Ofast -march=native -fopenmp -I../Vary_Layout_UKR/build -DLKF=16 -DLC=1 -DLOF=1 -DuNf=256 -DuNx=68 -DuNy=68 -DuNc=128 -DuNw=3 -DuNh=3 -DEdgeXY=4 -DuSx=1 -DuSy=1 testbed.cpp  -DTxy3=180 -DTf2=128 -DTc1=32
+cost list in order
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 16}, 4319627.228070175]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 16}, 4319627.228070175]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 16}, 4319627.228070175]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 16}, 4319627.228070175]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 16}, 4319627.228070175]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 16}, 4319627.228070175]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 32}, 4402696.98245614]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 8}, 4402696.98245614]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 32}, 4402696.98245614]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 8}, 4402696.98245614]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 32}, 4402696.98245614]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 8}, 4402696.98245614]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 32}, 4402696.98245614]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 8}, 4402696.98245614]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 32}, 4402696.98245614]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 8}, 4402696.98245614]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 32}, 4402696.98245614]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 8}, 4402696.98245614]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 16}, 4485766.736842105]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 8}, 4485766.736842105]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 16}, 4485766.736842105]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 8}, 4485766.736842105]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 16}, 4485766.736842105]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 8}, 4485766.736842105]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 16}, 4485766.736842105]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 8}, 4485766.736842105]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 16}, 4485766.736842105]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 8}, 4485766.736842105]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 16}, 4485766.736842105]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 8}, 4485766.736842105]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 8}, 4651906.245614035]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 8}, 4651906.245614035]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 8}, 4651906.245614035]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 8}, 4651906.245614035]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 8}, 4651906.245614035]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 8}, 4651906.245614035]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 32}, 5154218.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 5154218.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 5154218.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 16}, 5450154.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 16}, 5450154.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 16}, 5450154.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 8}, 6042026.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 8}, 6042026.666666667]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 8}, 6042026.666666667]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 32}, 7527872.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 7527872.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 7527872.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 16}, 7823808.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 16}, 7823808.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 7823808.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 8}, 8415680.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 8}, 8415680.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 8}, 8415680.0]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 1}, 10055658.666666666]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 1}, 10055658.666666666]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 1}, 10055658.666666666]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 1}, 10293024.0]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 1}, 10293024.0]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 1}, 10293024.0]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 1}, 10530389.333333334]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 1}, 10530389.333333334]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 1}, 10530389.333333334]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 1}, 11005120.0]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 1}, 11005120.0]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 1}, 11005120.0]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 1}, 11005120.0]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 1}, 11005120.0]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 1}, 11005120.0]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 1}, 12429312.0]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 1}, 12429312.0]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 1}, 12429312.0]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 1}, 14328234.666666668]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 1}, 14328234.666666668]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 1}, 14328234.666666668]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 32}, 14648832.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 14648832.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 14648832.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 16}, 14944768.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 16}, 14944768.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 14944768.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 8}, 15536640.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 8}, 15536640.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 8}, 15536640.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 1}, 16701888.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 1}, 16701888.0]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 1}, 16701888.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 1}, 23822848.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 1}, 23822848.0]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 1}, 23822848.0]
+gflops list
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 115.683]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 115.519]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 115.419]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 115.381]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 115.292]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 115.27]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 115.057]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 115.002]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 114.97]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 114.957]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 114.85]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 114.85]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 114.849]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 114.844]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 32}, 114.827]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 114.765]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 114.76]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 114.595]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 32}, 114.547]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 32}, 114.338]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 32}, 114.313]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 32}, 114.306]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 32}, 114.303]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 114.29]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 32}, 114.216]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 32}, 114.043]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 32}, 113.903]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 16}, 107.48]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 16}, 107.43]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 16}, 107.317]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 107.169]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 16}, 107.106]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 16}, 107.012]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 16}, 106.879]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 16}, 106.754]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 106.752]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 16}, 106.693]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 16}, 106.649]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 106.603]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 16}, 106.601]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 16}, 106.57]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 16}, 106.553]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 106.367]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 16}, 106.365]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 16}, 106.325]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 16}, 106.322]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 16}, 106.321]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 16}, 106.282]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 16}, 106.077]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 106.06]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 16}, 105.851]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 105.849]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 16}, 105.831]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 16}, 105.788]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 8}, 95.691]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 8}, 95.5877]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 8}, 95.4254]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 8}, 95.359]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 8}, 95.3056]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 8}, 95.1036]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 8}, 95.0716]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 8}, 94.8077]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 8}, 94.7793]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 8}, 94.6523]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 8}, 94.6122]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 8}, 94.5888]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 8}, 94.3418]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 8}, 94.1973]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 8}, 94.095]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 8}, 94.022]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 8}, 93.8419]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 8}, 93.8392]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 8}, 93.704]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 8}, 93.6612]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 8}, 93.5609]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 8}, 93.5438]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 8}, 93.3235]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 8}, 92.6845]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 8}, 92.6325]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 8}, 92.4067]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 8}, 92.2297]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 1}, 37.5623]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 1}, 37.5288]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 1}, 37.4901]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 1}, 37.4574]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 1}, 37.4431]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 32, 'Tc1': 1}, 37.4147]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 1}, 37.358]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 64, 'Tc1': 1}, 37.2116]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 32, 'Tc1': 1}, 37.1915]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 32, 'Tc1': 1}, 37.1607]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 64, 'Tc1': 1}, 37.1356]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 1}, 37.0998]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 32, 'Tc1': 1}, 37.0383]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 32, 'Tc1': 1}, 37.0166]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 32, 'Tc1': 1}, 36.6507]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 1}, 36.2454]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 32, 'Tc1': 1}, 36.2417]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 32, 'Tc1': 1}, 34.986]
+[{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 1}, 34.0804]
+[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 1}, 33.9969]
+[{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 1}, 33.9937]
+[{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 1}, 33.8472]
+[{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 1}, 33.8266]
+[{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 1}, 33.8147]
+[{'Tx3': 1, 'Ty3': 12, 'Tf2': 128, 'Tc1': 1}, 33.7875]
+[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 1}, 33.735]
+[{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 1}, 33.621]
+top costs
+[[{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454], [{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454], [{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454], [{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454], [{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454], [{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 4153487.7192982454], [{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421], [{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421], [{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421], [{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421], [{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421], [{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421], [{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421], [{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 16}, 4236557.47368421], [{'Tx3': 5, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 4236557.47368421]]
+top gflops
+[[{'Tx3': 5, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 115.683], [{'Tx3': 5, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 115.519], [{'Tx3': 10, 'Ty3': 18, 'Tf2': 64, 'Tc1': 32}, 115.419], [{'Tx3': 10, 'Ty3': 12, 'Tf2': 128, 'Tc1': 32}, 115.381], [{'Tx3': 1, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 115.292], [{'Tx3': 5, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 115.27], [{'Tx3': 10, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 115.057], [{'Tx3': 10, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 115.002], [{'Tx3': 10, 'Ty3': 18, 'Tf2': 128, 'Tc1': 32}, 114.97], [{'Tx3': 5, 'Ty3': 12, 'Tf2': 64, 'Tc1': 32}, 114.957], [{'Tx3': 5, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 114.85], [{'Tx3': 10, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 114.85], [{'Tx3': 1, 'Ty3': 6, 'Tf2': 64, 'Tc1': 32}, 114.849], [{'Tx3': 1, 'Ty3': 6, 'Tf2': 128, 'Tc1': 32}, 114.844], [{'Tx3': 5, 'Ty3': 18, 'Tf2': 32, 'Tc1': 32}, 114.827]]
+{(('Tx3', 10), ('Ty3', 6), ('Tf2', 128), ('Tc1', 16)), (('Tx3', 5), ('Ty3', 6), ('Tf2', 128), ('Tc1', 16)), (('Tx3', 5), ('Ty3', 12), ('Tf2', 128), ('Tc1', 16)), (('Tx3', 10), ('Ty3', 12), ('Tf2', 128), ('Tc1', 16)), (('Tx3', 5), ('Ty3', 18), ('Tf2', 64), ('Tc1', 32))}
+top15 diff: 5
+picked config performance:
+114.85
+114.85
+115.683
+115.381
+115.27
+114.97
+115.519
+106.752
+115.002
+105.849
+114.957
+107.169
+115.057
+106.367
+114.765
+predict top 15 avg perf: 112.8294
+actual top 15 avg perf: 115.118
+error: 0.019880470473774614
