@@ -13,13 +13,33 @@ make
 under TileLoopGenerator:
 check and fix the PATH in run_fromfiles.sh 
 
+run experiments on i7-9700k:
 ./run_fromfiles.sh yolo.txt 8
-to run all yolo benchmarks with 8 core
+
 
 then under yolo.txt.dirK1611
 grep "avg" *
 to check results
 (in raw data the yolo layer is named continous. layer1->yolo0, layer2-> yolo2, layer3-> yolo4 ... layer11-> yolo23)
+
+./run_fromfiles.sh resnet.txt 8
+grep resnet.txt.dirK1611
+./run_fromfiles.sh deepwise.txt 8
+grep ......
+
+run experiments on i9-10908xe:
+./run_fromfiles.sh yolo.txt 18
+grep ......
+./run_fromfiles.sh resnet.txt 18
+grep ......
+./run_fromfiles.sh deepwise.txt 18
+grep ......
+./run_fromfiles_small.sh resnet.txt 16
+grep ......
+./run_fromfiles_small.sh deepwise.txt 16
+grep ......
+
+# for resnet and deepwise(mobileNet) on i9, we have 2 different ukr.  so please do 2 group of tests and pick the best.
 ====
 
 run onednn
@@ -30,8 +50,9 @@ git checkout ad368f484
 put files under our onednn_test/ to onednn's example/
 check and fix the PATH in run_fromfiles.sh
 
-./run_fromfiles.sh yolo.txt 8
-to run all yolo benchmarks with 8 core
+i7-9700k
+./run_fromfiles.sh yolo.txt(or resnet/deepwise) 8
+
 
 then under yolo.txt.dir
 grep "avg" *
@@ -39,7 +60,9 @@ to check results
 
 
 
-
+i9-10980xe
+./run_fromfiles.sh yolo.txt(or resnet/deepwise) 18
+grep....
 
 
 -------------------------------------------------------------------------
