@@ -1,6 +1,6 @@
 recommend use miniconda with python 3.8
 requires python modules:  amplpy, sympy, joblib (recommend use pip in miniconda virtual env to install)
-requires libs/bins: icpc,  ampl, ipopt (need set up in the PATH, so 'ampl', 'ipopt' command is available to call in shell)
+requires libs/bins: icpc,  ampl, ipopt, clang++(version 10) (need set up in the PATH, so 'ampl', 'ipopt' command is available to call in shell)
 
 
 
@@ -10,13 +10,10 @@ cd build
 cmake ..
 make
 
-under TileLoopGenerator:
-check and fix the PATH in run_fromfiles.sh 
-
 run experiments on i7-9700k:
+go to /TileLoopGenerator:
+check and fix the PATH in run_fromfiles.sh 
 ./run_fromfiles.sh yolo.txt 8
-
-
 then under yolo.txt.dirK1611
 grep "avg" *
 to check results
@@ -27,7 +24,12 @@ grep resnet.txt.dirK1611
 ./run_fromfiles.sh deepwise.txt 8
 grep ......
 
+
+
+
 run experiments on i9-10908xe:
+go to /avx512/TileLoopGenerator
+check and fix the PATH in run_fromfiles.sh  run_fromfiles_small.sh
 ./run_fromfiles.sh yolo.txt 18
 grep ......
 ./run_fromfiles.sh resnet.txt 18
