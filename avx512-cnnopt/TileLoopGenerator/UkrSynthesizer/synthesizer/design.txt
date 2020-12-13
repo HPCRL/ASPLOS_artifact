@@ -1,0 +1,8 @@
+need a InstrinsicIssuer to disptach intel instrinsics
+
+InstrinsicIssuer first part:
+
+issue correct function call, need the function alias and arguments
+need to do naive func name check
+
+

@@ -1,0 +1,210 @@
+Error at 0, C1=-1.24491e+11, C2=5632
+Row:2, Col:16, time=0.003093, gflops=59.592547
+compare correct
+Row:2, Col:32, time=0.003803, gflops=96.933623
+Error at 200704, C1=1.93292e+25, C2=5556
+Row:2, Col:48, time=0.011039, gflops=50.091409
+Error at 1, C1=9.23482e+06, C2=6016
+Row:3, Col:16, time=0.003347, gflops=82.601408
+compare correct
+Row:3, Col:32, time=0.003949, gflops=140.027914
+compare correct
+Row:3, Col:48, time=0.005645, gflops=146.938820
+Error at 2, C1=1.18011e+12, C2=6078
+Row:4, Col:16, time=0.010041, gflops=36.713480
+Error at 200705, C1=-1.14045e+31, C2=5350
+Row:4, Col:32, time=0.005535, gflops=133.205964
+Error at 200704, C1=-3.98636e+29, C2=5556
+Row:4, Col:48, time=0.006403, gflops=172.719864
+compare correct
+Row:5, Col:16, time=0.003501, gflops=131.612890
+compare correct
+Row:5, Col:32, time=0.005272, gflops=174.813249
+Error at 200704, C1=-3.61484e+27, C2=5556
+Row:5, Col:48, time=0.007559, gflops=182.879856
+compare correct
+Row:6, Col:16, time=0.003491, gflops=158.399286
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=2 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=2 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=2 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=3 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=3 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=3 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=4 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=4 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=4 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=5 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=5 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=5 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=6 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}Error at 0, C1=-4.49799e+36, C2=5632
+Row:6, Col:32, time=0.005643, gflops=195.976369
+Error at 200704, C1=5556, C2=5556
+Row:6, Col:48, time=0.008342, gflops=198.858127
+compare correct
+Row:7, Col:16, time=0.003833, gflops=168.304372
+compare correct
+Row:7, Col:32, time=0.006633, gflops=194.517048
+compare correct
+Row:7, Col:48, time=0.009806, gflops=197.361736
+Error at 6, C1=7.81611e+31, C2=6491
+Row:8, Col:16, time=0.003922, gflops=187.986411
+Error at 0, C1=5631.31, C2=5632
+Row:8, Col:32, time=0.007215, gflops=204.373568
+compare correct
+Row:8, Col:48, time=0.011959, gflops=184.950745
+compare correct
+Row:9, Col:16, time=0.004123, gflops=201.163612
+Error at 0, C1=-5.34853e+28, C2=5632
+Row:9, Col:32, time=0.008053, gflops=205.993635
+Error at 200704, C1=5.19513e+23, C2=5556
+Row:9, Col:48, time=0.023377, gflops=106.443351
+Error at 1, C1=6446.14, C2=6016
+Row:10, Col:16, time=0.004372, gflops=210.790193
+compare correct
+Row:10, Col:32, time=0.008907, gflops=206.936511
+Error at 200705, C1=4.81805e+37, C2=5350
+Row:10, Col:48, time=0.026375, gflops=104.827268
+
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=6 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=6 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=7 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=7 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=7 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=8 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=8 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=8 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=9 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=9 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=9 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=10 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=10 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=10 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dictcompare correct
+Row:11, Col:16, time=0.004845, gflops=209.242538
+Error at 200705, C1=4.10594e+21, C2=5350
+Row:11, Col:32, time=0.014498, gflops=139.848300
+Error at 200704, C1=5561.6, C2=5556
+Row:11, Col:48, time=0.031873, gflops=95.418730
+compare correct
+Row:12, Col:16, time=0.005395, gflops=204.992252
+Error at 0, C1=4.16558e+07, C2=5632
+Row:12, Col:32, time=0.018878, gflops=117.165059
+Error at 200707, C1=-1.15744e+14, C2=5732
+Row:12, Col:48, time=0.045689, gflops=72.615997
+compare correct
+Row:13, Col:16, time=0.010071, gflops=118.965713
+Error at 0, C1=-7.91086e+18, C2=5632
+Row:13, Col:32, time=0.022811, gflops=105.044353
+Error at 326151, C1=1.20705e+24, C2=6127
+Row:13, Col:48, time=0.051741, gflops=69.466149
+compare correct
+Row:14, Col:16, time=0.006092, gflops=211.790028
+Error at 0, C1=3.06484e+18, C2=5632
+Row:14, Col:32, time=0.025958, gflops=99.409581
+Error at 200706, C1=3.34724e+21, C2=5459
+Row:14, Col:48, time=0.047533, gflops=81.432208
+compare correct
+Row:15, Col:16, time=0.006526, gflops=211.829821
+ {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=11 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=11 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=11 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=12 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=12 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=12 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=13 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=13 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=13 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=14 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=14 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=14 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=15 -DNCOL=16 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}Error at 326149, C1=6242.5, C2=6023
+Row:15, Col:32, time=0.027972, gflops=98.840917
+Error at 526859, C1=-2.6853e+10, C2=5759
+Row:15, Col:48, time=0.065915, gflops=62.917518
+
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=15 -DNCOL=32 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
+range_dict {'A': {'c2': 1, 'y': 114, 'x': 114, 'c1': 128, 'b': 1}, 'B': {'f2': 16, 's': 3, 'r': 3, 'c': 128, 'f1': 8}, 'C': {'f2': 1, 'y': 112, 'x': 112, 'f1': 128, 'b': 1}}
+layout_dict {'A': {'c2': 1, 'y': 1, 'x': 114, 'c1': 12996, 'b': 1663488}, 'B': {'f2': 1, 's': 16, 'r': 48, 'c': 144, 'f1': 18432}, 'C': {'f2': 1, 'y': 1, 'x': 112, 'f1': 12544, 'b': 1605632}}
+clang++ -O3 -Ofast --std=c++11 -L /home/rui/.linuxbrew/Cellar/libomp/10.0.1/lib -march=native -fopenmp -DNB=1 -DNF=128 -DNX=112 -DNY=112 -DNC=128 -DNR=3 -DNS=3 -DNROW=15 -DNCOL=48 -DACSPLIT=1 -DBFSPLIT=16 -DCFSPLIT=1 -DCTILE=32 ukrtest.cpp -lomp
