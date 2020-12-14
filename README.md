@@ -56,7 +56,7 @@ Note: Additional experiments were requrested by the shepeard
 ```
 cd /avx512/TileLoopGenerator
 //fix the PATH in run_fromfiles.sh to point to appropriate libraries and binaries
-RUIFIX: fix commands below
+
 ./run_fromfiles.sh yolo.txt 18
 grep  "avg" yolo.txt.dirK1611 
 ./run_fromfiles.sh resnet.txt 18
@@ -68,7 +68,7 @@ grep "avg" resnet.txt.dirK1611
 ./run_fromfiles_small.sh deepwise.txt 16
 grep "avg" deepwise.txt.dirK1611
 
-// for resnet and deepwise(mobileNet) on i9 (RUIFIX which i9?), we have 2 different ukr.  We ran both these microkernels and selected the best
+// for resnet and deepwise(mobileNet) on i9-10980xe, we have 2 different ukr.  We ran both these microkernels and selected the best
 ```
 
 
