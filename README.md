@@ -89,6 +89,7 @@ Steps:
 
 * download onednn (https://github.com/oneapi-src/oneDNN) and check this version
 * git checkout ad368f484
+* install onednn (https://github.com/oneapi-src/oneDNN#installation)
 * put files under our onednn_test/ to onednn's example/
 * check and fix the PATH in run_fromfiles.sh
 * run script
