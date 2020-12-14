@@ -5,10 +5,10 @@
   * create virtual env with python 3.8 (https://docs.python.org/3/tutorial/venv.html)
   * activate virtual env (https://docs.python.org/3/tutorial/venv.html)
   * modules required: amplpy, sympy, joblib (pip install)
-* Intel C++ Compiler (minimum version: RUIFILL)
-* AMPL -- https://ampl.com/try-ampl/download-a-free-demo/ (minimum version: RUIFILL)
-* IPOPT -- https://ampl.com/products/solvers/all-solvers-for-ampl/ (minimum version: RUIFILL)
-* LLVM version 10.0
+* Intel C++ Compiler (minimum version: 2019)
+* AMPL -- https://ampl.com/try-ampl/download-a-free-demo/ (minimum version:  20181102)
+* IPOPT -- https://ampl.com/products/solvers/all-solvers-for-ampl/ (minimum version:3.12.13)
+* LLVM version 10.0 (for extra expreiment on avx512 only)
 * likwid -- https://github.com/RRZE-HPC/likwidFor (for hardware counter measurements only)
 
 
@@ -36,15 +36,15 @@ make
 cd TileLoopGenerator
 //fix the PATH in run_fromfiles.sh to point to appropriate libraries and binaries
 ./run_fromfiles.sh yolo.txt 8
-grep avg* yolo.txt.dirK1611 RUIFIX ( Is this the exact command)
-//grep "avg" * will show the results
+grep "avg" yolo.txt.dirK1611 
+//grep "avg" * will show the average gflops results
 //(in raw data the yolo layer is named continous. layer1->yolo0, layer2-> yolo2, layer3-> yolo4 ... layer11-> yolo23)
 
 cd ../
 ./run_fromfiles.sh resnet.txt 8
-grep resnet.txt.dirK1611 RUIFIX(should the user search for avg*? make sure that the commands are precise and working)
+grep "avg" resnet.txt.dirK1611 
 ./run_fromfiles.sh deepwise.txt 8
-grep ...... RUIFIX(should the user search for avg*? make sure that the commands are precise and working; dont use ...)
+grep "avg" deepwise.txt.dirK1611
 
 ```
 
@@ -58,15 +58,15 @@ cd /avx512/TileLoopGenerator
 //fix the PATH in run_fromfiles.sh to point to appropriate libraries and binaries
 RUIFIX: fix commands below
 ./run_fromfiles.sh yolo.txt 18
-grep ......
+grep  "avg" yolo.txt.dirK1611 
 ./run_fromfiles.sh resnet.txt 18
-grep ......
+grep "avg" resnet.txt.dirK1611 
 ./run_fromfiles.sh deepwise.txt 18
-grep ......
+grep "avg" deepwise.txt.dirK1611
 ./run_fromfiles_small.sh resnet.txt 16
-grep ......
+grep "avg" resnet.txt.dirK1611 
 ./run_fromfiles_small.sh deepwise.txt 16
-grep ......
+grep "avg" deepwise.txt.dirK1611
 
 // for resnet and deepwise(mobileNet) on i9 (RUIFIX which i9?), we have 2 different ukr.  We ran both these microkernels and selected the best
 ```
@@ -82,7 +82,7 @@ Steps:
 
 * cd validation_all/gflop_validate  // or  /validation_all/hdwc_validate
 * run the following bash files:
-* gflop: run_valid_*.sh
+* gflop: run_valid_*.sh (* is mob/res/yolo)
 * hdwc: runhc_*.sh
 
 ### onednn
@@ -94,7 +94,7 @@ Steps:
 * run script
   * AVX2: ./run_fromfiles.sh yolo.txt(or resnet/deepwise) 8  
   * AVX512: ./run_fromfiles.sh yolo.txt(or resnet/deepwise) 18
-* then under yolo.txt.dir grep "avg" * to check results  RUIFIX ( show the exact command)
+* then under yolo.txt.dir grep "avg" * to check results  
 
 
 ### TVM test
