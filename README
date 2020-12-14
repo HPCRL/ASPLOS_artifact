@@ -12,6 +12,8 @@ llvm10
 
 to get stable experiment results, please diable hyperthreads and fix the frequency at base frequency of CPU
 
+step 1 and 2 is for producing results in submitted paper.
+seep 3 and 4 will produce results of extra experiment asked by the shepherd. These are not yet shown in submitted paper but will be added, accroding to shepherd's instructions.
 1. compile avx2 ukr generator:
 goto /Vary_Layout_Ukr:
 mkdir build
