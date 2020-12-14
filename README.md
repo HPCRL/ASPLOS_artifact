@@ -102,25 +102,24 @@ Steps:
 RUIFIX I am not sure if [1] and [2] is some references or some notes. Fix this
 
 [1] See subfolder tvm-thread1
-1. Using TVM v0.6 commit 008aa838139bcd8e66c680f14a944f7af274a33d
-and LLVM-8
 
-2. Build TVM following its official website instruction
+* Use TVM v0.6 commit 008aa838139bcd8e66c680f14a944f7af274a33d and LLVM-8
 
-3. Replace tvm/topi/python/topi/x86/conv2d.py with the file we provide(same file name). We create a TOPI registered function to invoke the convolution schedule and template which is the same as TVM built-in template but exposes it to the external call.
+* Build TVM following its official website instruction
 
-4. For tuning and timing script you need to change the TVM_NUM_THREADS based on the target machine. see line 14-15 in both tuning and timing python script. Also for flush cache for multi-core, you need to change "num_of_core" in timing.c line 10.
+* Replace tvm/topi/python/topi/x86/conv2d.py with the file we provide(same file name). We create a TOPI registered function to invoke the convolution schedule and template which is the same as TVM built-in template but exposes it to the external call.
 
-5. Modify dumped llvm file to invoke cache flush and timing. Execute modi-llvm.sh
+* For tuning and timing script you need to change the TVM_NUM_THREADS based on the target machine. see line 14-15 in both tuning and timing python script. Also for flush cache for multi-core, you need to change "num_of_core" in timing.c line 10.
 
-6. Build llvm file and generate shared object (.so) file by using
+* Modify dumped llvm file to invoke cache flush and timing. Execute modi-llvm.sh
+
+* Build llvm file and generate shared object (.so) file by using
 "clang-8 -shared -fPIC -mavx2 -march=native -O3 YOLO1.log.ll -o YOLO1.so timing.c -fopenmp=libomp "
 You need to replace llvm file name and output file name if necessary. See generate_so.script for detail compile cmd. 
 
-7. Modify the shared library path in file “tune_conv2d_x86_timing.py” before measuring time(around line 75 "path_dso = ..."). 
+* Modify the shared library path in file “tune_conv2d_x86_timing.py” before measuring time(around line 75 "path_dso = ..."). 
 tune_conv2d_x86_timing.py needs to load a ".so" file created in step 6 to do the time measurement. 
-
-8. Add corresponding file path in script “tune_all.sh”, “measure_all.sh”.
+* Add corresponding file path in script “tune_all.sh”, “measure_all.sh”.
 The script “run.sh” executes all training and time measure tasks at one time. If you want to do these tasks separately, run “tune_all.sh”, “measure_all.sh” separately.
 
 [2] tvm-thread512 is the folder of avx512 tuning and timing scripts. Please follow the previous steps as in "tvm-thread1". 
