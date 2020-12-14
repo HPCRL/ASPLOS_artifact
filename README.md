@@ -1,34 +1,38 @@
 # Artifact: Analytical characterization and design space exploration for optimization of CNNs
 
-## Requirements
+## Requirements 
 * Python 3.8 (we recommend using miniconda https://docs.conda.io/en/latest/miniconda.html)
-  * create virtual env with python 3.8
-  * activate virtual env
+  * create virtual env with python 3.8 (https://docs.python.org/3/tutorial/venv.html)
+  * activate virtual env (https://docs.python.org/3/tutorial/venv.html)
+  * modules required: amplpy, sympy, joblib (pip install)
+* Intel C++ Compiler (minimum version: RUIFILL)
+* AMPL -- https://ampl.com/try-ampl/download-a-free-demo/ (minimum version: RUIFILL)
+* IPOPT -- https://ampl.com/products/solvers/all-solvers-for-ampl/ (minimum version: RUIFILL)
+* LLVM version 10.0
+* likwid -- https://github.com/RRZE-HPC/likwidFor (for hardware counter measurements only)
 
-recommend install miniconda (https://docs.conda.io/en/latest/miniconda.html#)
-create virtual env with python 3.8
-activate virtual env
-requires python modules:  amplpy, sympy, joblib (recommend use "pip install" in miniconda virtual env to install)
-requires libs/bins: 
-icpc 
-ampl (https://ampl.com/try-ampl/download-a-free-demo/)
-ipopt (https://ampl.com/products/solvers/all-solvers-for-ampl/)
-llvm10
-(all of these need to be set up in the PATH, so 'ampl', 'ipopt', 'icpc', 'clang++' command is available to call in shell)
-#for hardware counter, likwid is also required: https://github.com/RRZE-HPC/likwid
 
-to get stable experiment results, please diable hyperthreads and fix the frequency at base frequency of CPU
+## Notes
 
-step 1 and 2 is for producing results in submitted paper.
-seep 3 and 4 will produce results of extra experiment asked by the shepherd. These are not yet shown in submitted paper but will be added, accroding to shepherd's instructions.
-1. compile avx2 ukr generator:
-goto /Vary_Layout_Ukr:
+* For stable experiment results, please disable hyperthreads and fix the frequency to the base frequency of processor
+
+## Experiments
+
+### Reproducing figures in the submitted paper
+
+#### compile avx2 ukr generator
+
+``` 
+cd /Vary_Layout_Ukr:
 mkdir build
 cd build
 cmake ..
 make
+```
 
-2. run experiments on i7-9700k:
+#### run experiments (The numbers reported in the paper were obtained using Intel i7-9700k processor)
+
+```
 go to /TileLoopGenerator:
 check and fix the PATH in run_fromfiles.sh 
 ./run_fromfiles.sh yolo.txt 8
@@ -40,7 +44,9 @@ to check results
 ./run_fromfiles.sh resnet.txt 8
 grep resnet.txt.dirK1611
 ./run_fromfiles.sh deepwise.txt 8
-grep ......
+grep ...... (RUIFIX what is this grep ...
+
+```
 
 
 
