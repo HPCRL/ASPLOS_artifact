@@ -30,30 +30,33 @@ cmake ..
 make
 ```
 
-#### run experiments (The numbers reported in the paper were obtained using Intel i7-9700k processor)
+#### run preliminary experiments (The numbers reported in the paper were obtained using Intel i7-9700k processor)
 
 ```
-go to /TileLoopGenerator:
-check and fix the PATH in run_fromfiles.sh 
+cd TileLoopGenerator
+//fix the PATH in run_fromfiles.sh to point to appropriate libraries and binaries
 ./run_fromfiles.sh yolo.txt 8
-then under yolo.txt.dirK1611
-grep "avg" *
-to check results
-(in raw data the yolo layer is named continous. layer1->yolo0, layer2-> yolo2, layer3-> yolo4 ... layer11-> yolo23)
+grep avg* yolo.txt.dirK1611 RUIFIX ( Is this the exact command)
+//grep "avg" * will show the results
+//(in raw data the yolo layer is named continous. layer1->yolo0, layer2-> yolo2, layer3-> yolo4 ... layer11-> yolo23)
 
+cd ../
 ./run_fromfiles.sh resnet.txt 8
-grep resnet.txt.dirK1611
+grep resnet.txt.dirK1611 RUIFIX(should the user search for avg*? make sure that the commands are precise and working)
 ./run_fromfiles.sh deepwise.txt 8
-grep ...... (RUIFIX what is this grep ...
+grep ...... RUIFIX(should the user search for avg*? make sure that the commands are precise and working; dont use ...)
 
 ```
 
+### Additional experiments
+Note: Additional experiments were requrested by the shepeard
 
+#### AVX512 experiments (We ran our experiments on an Intel i9-10908xe processor)
 
-
-3. run experiments on i9-10908xe:
-go to /avx512/TileLoopGenerator
-check and fix the PATH in run_fromfiles.sh  run_fromfiles_small.sh
+```
+cd /avx512/TileLoopGenerator
+//fix the PATH in run_fromfiles.sh to point to appropriate libraries and binaries
+RUIFIX: fix commands below
 ./run_fromfiles.sh yolo.txt 18
 grep ......
 ./run_fromfiles.sh resnet.txt 18
@@ -65,41 +68,39 @@ grep ......
 ./run_fromfiles_small.sh deepwise.txt 16
 grep ......
 
-# for resnet and deepwise(mobileNet) on i9, we have 2 different ukr.  so please do 2 group of tests and pick the best.
-
-4. run validation on avx2 single core
-Requires likwid to be installed properly
-goto /validation_all/gflop_validate or  /validation_all/hdwc_validate
-run the follwing bash files:
-gflop: run_valid_*.sh
-hdwc: runhc_*.sh
-====
-
-run onednn
-
-download onednn (https://github.com/oneapi-src/oneDNN) and check this version
-git checkout ad368f484
-
-put files under our onednn_test/ to onednn's example/
-check and fix the PATH in run_fromfiles.sh
-
-i7-9700k
-./run_fromfiles.sh yolo.txt(or resnet/deepwise) 8
+// for resnet and deepwise(mobileNet) on i9 (RUIFIX which i9?), we have 2 different ukr.  We ran both these microkernels and selected the best
+```
 
 
-then under yolo.txt.dir
-grep "avg" *
-to check results
+#### Hardware counter validation
+
+Note: 
+  * We ran our experiments on an Intel i7-9700k machine
+  * requires likwid
+
+Steps:
+
+* cd validation_all/gflop_validate  // or  /validation_all/hdwc_validate
+* run the following bash files:
+* gflop: run_valid_*.sh
+* hdwc: runhc_*.sh
+
+### onednn
+
+* download onednn (https://github.com/oneapi-src/oneDNN) and check this version
+* git checkout ad368f484
+* put files under our onednn_test/ to onednn's example/
+* check and fix the PATH in run_fromfiles.sh
+* run script
+  * AVX2: ./run_fromfiles.sh yolo.txt(or resnet/deepwise) 8  
+  * AVX512: ./run_fromfiles.sh yolo.txt(or resnet/deepwise) 18
+* then under yolo.txt.dir grep "avg" * to check results  RUIFIX ( show the exact command)
 
 
+### TVM test
 
-i9-10980xe
-./run_fromfiles.sh yolo.txt(or resnet/deepwise) 18
-grep....
+RUIFIX I am not sure if [1] and [2] is some references or some notes. Fix this
 
-
--------------------------------------------------------------------------
-Run TVM tests
 [1] See subfolder tvm-thread1
 1. Using TVM v0.6 commit 008aa838139bcd8e66c680f14a944f7af274a33d
 and LLVM-8
