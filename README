@@ -1,3 +1,10 @@
+#Artifact: Analytical characterization and design space exploration for optimization of CNNs
+
+## Requirements
+* Python 3.8 (we recommend using miniconda https://docs.conda.io/en/latest/miniconda.html)
+  * create virtual env with python 3.8
+  * activate virtual env
+
 recommend install miniconda (https://docs.conda.io/en/latest/miniconda.html#)
 create virtual env with python 3.8
 activate virtual env
