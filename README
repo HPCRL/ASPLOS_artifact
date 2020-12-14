@@ -1,4 +1,4 @@
-#Artifact: Analytical characterization and design space exploration for optimization of CNNs
+# Artifact: Analytical characterization and design space exploration for optimization of CNNs
 
 ## Requirements
 * Python 3.8 (we recommend using miniconda https://docs.conda.io/en/latest/miniconda.html)
