@@ -5,6 +5,7 @@
   * create virtual env with python 3.8 (https://docs.python.org/3/tutorial/venv.html)
   * activate virtual env (https://docs.python.org/3/tutorial/venv.html)
   * modules required: amplpy, sympy, joblib (pip install)
+* cmake 3.19
 * Intel C++ Compiler (minimum version: 2019)
 * AMPL -- https://ampl.com/try-ampl/download-a-free-demo/ (minimum version:  20181102)
 * IPOPT -- https://ampl.com/products/solvers/all-solvers-for-ampl/ (minimum version:3.12.13)
