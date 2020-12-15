@@ -103,7 +103,7 @@ Steps:
 
 * Run TVM using a single thread with avx2 instruction set. See folder tvm-thread1
   * Use TVM v0.6 commit 008aa838139bcd8e66c680f14a944f7af274a33d and LLVM-8
-  * Build TVM following the official website instruction
+  * Build TVM following the official website instruction(https://tvm.apache.org/docs/install/from_source.html)
   * Replace tvm/topi/python/topi/x86/conv2d.py with the file we provide(same file name). We create a TOPI registered function to invoke the convolution schedule. The template is exactly the same as the default template from TVM, but it exposes the call to the training script.
   * For tuning and timing tvm, you need to change the TVM_NUM_THREADS based on the target machine environment. See lines 14-15 in both tuning and timing python script(tune_conv2d_x86.py and tune_conv2d_x86_timing.py). Also, for flushing the cache, you need to change "num_of_core" in timing.c at line 10.
   * Execute modi-llvm.sh to modify LLVM IR file to insert cache flush and timing function. 
