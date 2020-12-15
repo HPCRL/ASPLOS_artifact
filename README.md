@@ -24,14 +24,14 @@
 #### compile avx2 ukr generator
 
 ``` 
-cd /Vary_Layout_Ukr:
+cd Vary_Layout_Ukr:
 mkdir build
 cd build
 cmake ..
 make
 ```
 
-#### run preliminary experiments (The numbers reported in the paper were obtained using Intel i7-9700k processor)
+#### run preliminary experiments (the numbers reported in the paper were obtained using Intel i7-9700k processor)
 
 ```
 cd TileLoopGenerator
