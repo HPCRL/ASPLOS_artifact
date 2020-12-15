@@ -15,7 +15,7 @@
 
 ## Notes
 
-* For stable experiment results, please disable hyperthreads and fix the frequency to the base frequency of processor
+* For stable experiment results, please disable hyperthreading and fix the frequency to the base frequency of the processor
 
 ## Experiments
 
@@ -50,7 +50,7 @@ grep "avg" deepwise.txt.dirK1611
 ```
 
 ### Additional experiments
-Note: Additional experiments were requrested by the shepeard
+Note: Additional experiments were requested by the Shepeard
 
 #### AVX512 experiments (We ran our experiments on an Intel i9-10908xe processor)
 
@@ -101,16 +101,16 @@ Steps:
 
 ### TVM test
 
-* Run TVM on single thread with avx2 instruction set. See folder tvm-thread1
+* Run TVM using a single thread with avx2 instruction set. See folder tvm-thread1
   * Use TVM v0.6 commit 008aa838139bcd8e66c680f14a944f7af274a33d and LLVM-8
-  * Build TVM following its official website instruction
-  * Replace tvm/topi/python/topi/x86/conv2d.py with the file we provide(same file name). We create a TOPI registered function to invoke the convolution schedule and template which is the same as TVM built-in template but exposes it to the external call.
-  * For tuning and timing tvm, you need to change the TVM_NUM_THREADS based on the target machine environment. See line 14-15 in both tuning and timing python script(tune_conv2d_x86.py and tune_conv2d_x86_timing.py). Also for flush cache for multi-core, you need to change "num_of_core" in timing.c at line 10.
-  * Execute modi-llvm.sh to modify dumped llvm file to insert cache flush and timing function. 
-  * Build llvm file and generate shared object (.so) file by executing generate_so.script. Changing proper names for different benchmark if necessary. See detail compile cmd in generate_so.script.
+  * Build TVM following the official website instruction
+  * Replace tvm/topi/python/topi/x86/conv2d.py with the file we provide(same file name). We create a TOPI registered function to invoke the convolution schedule. The template is exactly the same as the default template from TVM, but it exposes the call to the training script.
+  * For tuning and timing tvm, you need to change the TVM_NUM_THREADS based on the target machine environment. See lines 14-15 in both tuning and timing python script(tune_conv2d_x86.py and tune_conv2d_x86_timing.py). Also, for flushing the cache, you need to change "num_of_core" in timing.c at line 10.
+  * Execute modi-llvm.sh to modify LLVM IR file to insert cache flush and timing function. 
+  * Build LLVM file and generate shared object (.so) file by executing generate_so.script. Modify the script to change the benchmark. See compile cmd in generate_so.script for additional details.
   * Modify the shared library path in file “tune_conv2d_x86_timing.py” before measuring time(around line 75 "path_dso = ..."). tune_conv2d_x86_timing.py needs to load a ".so" file created in step 6 to do the time measurement. 
-  * Add corresponding file path in script “tune_all.sh”, “measure_all.sh” if you want to reproduce tvm results. The script “run.sh” executes all training and time measure tasks at one time. If you want to do these tasks separately, run “tune_all.sh”, “measure_all.sh” separately. Please double check path_dso, number_of_cores as above mentioned.
+  * Add corresponding file path in script “tune_all.sh”, “measure_all.sh” if you want to reproduce tvm results. The script “run.sh” executes all training and time measure tasks together. If you want to do these tasks separately, run “tune_all.sh”, “measure_all.sh” separately. Please double-check path_dso, number_of_cores as above mentioned.
 
-* Run TVM on 18 threads on avx512 instrution set. See floder tvm-thread512 which contains avx512 tuning and timing scripts. Please follow the previous instructions as in "tvm-thread1". 
+* Run TVM on 18 threads on avx512 instruction set. See tvm-thread512, which directory contains avx512 tuning and timing scripts. Please follow the previous instructions as in "tvm-thread1". 
 
 
