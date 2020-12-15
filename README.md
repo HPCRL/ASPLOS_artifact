@@ -37,15 +37,15 @@ make
 cd TileLoopGenerator
 //fix the PATH in run_fromfiles.sh to point to appropriate libraries and binaries
 ./run_fromfiles.sh yolo.txt 8
-grep "avg" yolo.txt.dirK1611 
-//grep "avg" * will show the average gflops results
+grep  -irn "avg" yolo.txt.dirK1611 
+//grep  -irn "avg" * will show the average gflops results of the * folder
 //(in raw data the yolo layer is named continous. layer1->yolo0, layer2-> yolo2, layer3-> yolo4 ... layer11-> yolo23)
 
 cd ../
 ./run_fromfiles.sh resnet.txt 8
-grep "avg" resnet.txt.dirK1611 
+grep  -irn "avg" resnet.txt.dirK1611 
 ./run_fromfiles.sh deepwise.txt 8
-grep "avg" deepwise.txt.dirK1611
+grep  -irn "avg" deepwise.txt.dirK1611
 
 ```
 
@@ -59,15 +59,15 @@ cd /avx512/TileLoopGenerator
 //fix the PATH in run_fromfiles.sh to point to appropriate libraries and binaries
 
 ./run_fromfiles.sh yolo.txt 18
-grep  "avg" yolo.txt.dirK1611 
+grep -irn "avg" yolo.txt.dirK1611 
 ./run_fromfiles.sh resnet.txt 18
-grep "avg" resnet.txt.dirK1611 
+grep -irn "avg" resnet.txt.dirK1611 
 ./run_fromfiles.sh deepwise.txt 18
-grep "avg" deepwise.txt.dirK1611
+grep  -irn "avg" deepwise.txt.dirK1611
 ./run_fromfiles_small.sh resnet.txt 16
-grep "avg" resnet.txt.dirK1611 
+grep  -irn "avg" resnet.txt.dirK1611 
 ./run_fromfiles_small.sh deepwise.txt 16
-grep "avg" deepwise.txt.dirK1611
+grep  -irn "avg" deepwise.txt.dirK1611
 
 // for resnet and deepwise(mobileNet) on i9-10980xe, we have 2 different ukr.  We ran both these microkernels and selected the best
 ```
@@ -96,7 +96,7 @@ Steps:
 * run script
   * AVX2: ./run_fromfiles.sh yolo.txt(or resnet/deepwise) 8  
   * AVX512: ./run_fromfiles.sh yolo.txt(or resnet/deepwise) 18
-* then under yolo.txt.dir grep "avg" * to check results  
+* then grep  -irn  "avg" yolo.txt.dir to check results  
 
 
 ### TVM test
