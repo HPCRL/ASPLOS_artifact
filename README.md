@@ -14,7 +14,7 @@
 
 
 ## Notes
-
+* Make IPOPT bin as global visible. (Add it in PATH)
 * For stable experiment results, please disable hyperthreading and fix the frequency to the base frequency of the processor
 
 ## Experiments
