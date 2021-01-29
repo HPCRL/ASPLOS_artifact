@@ -51,7 +51,7 @@ class Runner:
             
             
 
-        cmd = "icpc -O3 -Ofast -march=native -fopenmp "+ '-I'+self.the_header
+        cmd = "icpc -O3 --std=c++11 -Ofast -march=native -fopenmp "+ '-I'+self.the_header
         for name in compile_option.keys():
         value = compile_option.get(name)
         cmd += ' '+ name + '='+ str(value)

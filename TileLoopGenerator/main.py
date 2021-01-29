@@ -70,7 +70,7 @@ class Runner:
             
             
         time.sleep(5)
-        cmd = "icpc -O3 -Ofast -march=native -fopenmp "+ '-I'+self.the_header
+        cmd = "icpc -O3 --std=c++11 -Ofast -march=native -fopenmp "+ '-I'+self.the_header
         time.sleep(1)
         for name in compile_option.keys():
             value = compile_option.get(name)
@@ -536,7 +536,7 @@ def run_one_from_batch(pbsz, split_fc, config, parallel_fork=None, numAB=[6,16])
     # subprocess.call(ukrcmd, shell=True, cwd=the_header)
     
     
-    cmd = "icpc -O3 -Ofast -march=native -fopenmp "+ '-I'+the_header
+    cmd = "icpc --std=c++11 -O3 -Ofast -march=native -fopenmp "+ '-I'+the_header
     for name in compile_option.keys():
         value = compile_option.get(name)
         cmd += ' '+ name + '='+ str(value)
