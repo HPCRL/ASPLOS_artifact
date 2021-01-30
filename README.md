@@ -30,7 +30,7 @@
 * For stable experiment results, please disable hyperthreading and fix the frequency to the base frequency of the processor, please check section Extension and variance for details
 * We currently support 2 different ISAs: avx2 and avx512.  We predefined micro-kernel shape for the 2 ISAs.  AVX2 has only 1 type of micro-kernel with shape 6x16, AVX512 has 2 types of micro-kernel with shape 7x32 (used in run_fromfile_small.sh) and 10x32 (used in run_fromfile.sh).  We have only tested avx2 implementation on avx2 CPUs, and avx512 implmentation on avx512 CPUs.  Imporper selection of micro-kernel could result undefined errors.
 * We use one of the common way to parse the arguments from user's terminal, that is "$1, $2" will be considered as the 1st and 2nd argument from user's terminal input. It could be possible that some other software/configuration on users platform insert some predefined argument into the /bin/bash environment, and brings to argument parsing failure.
-
+* When we run the tvm experiment in the training part, we have not seen stall progress as one reviewer reported after configuration space has been printed on the terminal. Manually killing the python job can show the stack frame at the stuck location.
 
 ## Extensions are variance
 * To maintain the stability of performance, it is required to guarantee there are no background processes/deamons alive when experiments are running. It is more likely to happen on reserarch/public clusters, where user does not have permission to turnoff deamon processes. Failure of cleaning up the background processes result in very unstable performance measurement.
