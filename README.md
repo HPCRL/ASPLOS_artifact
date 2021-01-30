@@ -21,7 +21,7 @@
 * We fully rely on Likwid event to measure the hardware counters.  The available events provided by Likwids is very different on different architecture.  In this artifact, all hardware counter validation codes are hand-crafted, and are strictly relies on likwid hardware event mapping of Intel i7-9700k (coffee lake).  
 * Likwid might request extra permissions to some system files, depends on user's platform type. Please seeking help from Likwid's github (https://github.com/RRZE-HPC/likwid/issues) if similar problems happens.
 
-## Trouble shooting
+## Troubleshooting
 * We notice that there are some compatibility issues when ICC2019 and GCC9 are installed together. Detailed information can be found at Intel's forum:
   https://community.intel.com/t5/Intel-C-Compiler/icpc-does-not-work-with-quot-std-c-17-quot-on-ICC-19-0-4-243/m-p/1153133?profile.language=en
   To fix this problem we have added flag "--std=c++11" and passed testing on bantu 20.04 and gcc9.3. If users still encouter this issue, please consider doengrade gcc version to gcc7.5.
@@ -32,11 +32,13 @@
 * We use one of the common way to parse the arguments from user's terminal, that is "$1, $2" will be considered as the 1st and 2nd argument from user's terminal input. It could be possible that some other software/configuration on users platform insert some predefined argument into the /bin/bash environment, and brings to argument parsing failure.
 * When we run the tvm experiment in the training part, we have not seen stall progress as one reviewer reported after configuration space has been printed on the terminal. Manually killing the python job can show the stack frame at the stuck location.
 
-## Extensions are variance
+
+## Minimizing variance
 * To maintain the stability of performance, it is required to guarantee there are no background processes/deamons alive when experiments are running. It is more likely to happen on reserarch/public clusters, where user does not have permission to turnoff deamon processes. Failure of cleaning up the background processes result in very unstable performance measurement.
 * To maintain the stability of performance, it is required to disable hyperthreads, or any techniques that can map more than 1 thread on the same physical core.
 * To maintain the stability of performance, we suggest to disable DVFS, or any techniques that can dynamically change the frequency.
 
+## Running custom benchmarks on custom platforms
 * CPUs we have tested:
 AVX2: 2 socket 2x14 core Intel Xeon E5-v2680 (broadwell)
       1 socket 1x8 core Intel i7-9700k(coffee lake)
