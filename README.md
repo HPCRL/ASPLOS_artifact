@@ -18,7 +18,7 @@
 * It is required to set AMPL and IPOPT binary as global visible (Adding them in system PATH).
 * The OS version and GCC version we have tested are Ubantu 16.04 and gcc7.5 and Ubantu 20.04 and gcc9.3. 
 * All of our script file (.sh) need to be run under /bin/bash shell.    
-* We fully relies on Likwid event to measure the hardware counters.  The available events provided by Likwids is very different on different architecture.  In this artifact, all hardware counter validation codes are hand-crafted, and are strictly relies on likwid hardware envent mapping of Intel i7-9700k (coffee lake).  
+* We fully relies on Likwid event to measure the hardware counters.  The available events provided by Likwids is very different on different architecture.  In this artifact, all hardware counter validation codes are hand-crafted, and are strictly relies on likwid hardware event mapping of Intel i7-9700k (coffee lake).  
 * Likwid might request extra permissions to some system files, depends on user's platform type. Please seeking help from Likwid's github (https://github.com/RRZE-HPC/likwid/issues) if similar problems happens.
 
 ## Trouble shooting
