@@ -1,13 +1,33 @@
 # Artifact: Analytical characterization and design space exploration for optimization of CNNs
 
-## Requirements 
+## Requirements
+   We also provide recommendations in terms of commands which you can ignore.
+
+   ```bash
+   cd `git rev-parse --show-toplevel`
+   mkdir -p workspace;
+   export WORKSPACE_ROOT=`readlink -f workspaece`;
+   ```
+
 * Python 3.8 (we recommend using miniconda https://docs.conda.io/en/latest/miniconda.html)
   * create virtual env with python 3.8 (https://docs.python.org/3/tutorial/venv.html)
   * activate virtual env (https://docs.python.org/3/tutorial/venv.html)
   * modules required: amplpy, sympy, joblib (pip install)
+    ```bash
+    pip install -r $WORKSPACE_ROOT/../requirements.txt
+    ```
 * cmake 3.19
 * Intel C++ Compiler (minimum version: 2019)
 * AMPL -- https://ampl.com/try-ampl/download-a-free-demo/ (minimum version:  20181102)
+  ```bash
+  mkdir -p workspace
+  cd workspace;
+  if [ ! -f ampl.linux64.tgz ]; then
+    wget https://ampl.com/demo/ampl.linux64.tgz
+  fi;
+  tar xf ampl.linux64.tgz
+  export PATH=`readlink -f ampl.linux-intel64`:$PATH
+  ```
 * IPOPT -- https://ampl.com/products/solvers/all-solvers-for-ampl/ (minimum version:3.12.13)
 * LLVM version 10.0 (for extra expreiment on avx512 only)
 * likwid -- https://github.com/RRZE-HPC/likwid (for hardware counter measurements only)
