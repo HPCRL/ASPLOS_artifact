@@ -1,5 +1,10 @@
 # Artifact: Analytical characterization and design space exploration for optimization of CNNs
-
+## Note
+Please be aware that all experiment in this repo & paper has the same "cache flushing" component.  When comparing to this repo, please ensure the same "cache flushing" compnent is applied in all experiments.  Missing of cache flush will results significant cache benefits, and introduces unfair comparison.
+Please be aware that the bandwidth and capacity parameter are currently hard-coded, using the machine config of:
+      1 socket 1x8 core Intel i7-9700k(coffee lake)
+      1 socket 1x18 core Intel i9-10980xe (cascade lake)
+Without changing the parameters, the experiment will not be correct.
 ## Requirements 
 * Python 3.8 (we recommend using miniconda https://docs.conda.io/en/latest/miniconda.html)
   * create virtual env with python 3.8 (https://docs.python.org/3/tutorial/venv.html)
