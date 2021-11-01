@@ -23,7 +23,7 @@
 ## Environment configuration suggestions
 * We suggest the user to directly download AMPL binary file and IPOPT binary file from the ampl.com website (accurate link listed in Requirements), so there is no need for user to go over for the AMPL/IPOPT compilation process. 
 * It is necessary to set AMPL and IPOPT binary as global visible (Adding them in the system PATH variable).
-* The OS version and GCC version we have tested are Ubantu 16.04 and gcc7.5 and Ubantu 20.04 and gcc9.3. 
+* The OS version and GCC version we have tested are Ubuntu 16.04 and gcc7.5 and Ubuntu 20.04 and gcc9.3. 
 * All of our script files (.sh) need to be run under /bin/bash shell.    
 * We fully rely on Likwid event to measure the hardware counters.  The available events provided by Likwids is very different on different architecture.  In this artifact, all hardware counter validation codes are hand-crafted, and are strictly relies on likwid hardware event mapping of Intel i7-9700k (coffee lake).  
 * Likwid might request extra permissions to some system files, depends on user's platform type. Please seeking help from Likwid's github (https://github.com/RRZE-HPC/likwid/issues) if similar problems happens.
